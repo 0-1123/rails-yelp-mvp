@@ -1,0 +1,18 @@
+<h1><%= @restaurant.name %></h1>
+<p><%= @restaurant.category %></p>
+<h4>Address</h4>
+<p><%= @restaurant.address %></p>
+<% unless @restaurant.phone_number.empty? %>
+  <h4>Phone number</h4>
+  <p><%= @restaurant.phone_number %></p>
+<% end %>
+<h3>Reviews</h3>
+<ul>
+   <% @restaurant.reviews.each do |review| %>
+    <li>
+      <p> <%= review.rating%>/5 <%= review.content  %></p>
+    </li>
+   <% end %>
+</ul>
+<%= link_to "Add review", new_restaurant_review_path(@restaurant), class: "btn btn-danger" %>
+<%= link_to "Back", restaurants_path, class: "badge badge-light" %>

@@ -62,3 +62,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
+
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'
+gem 'simple_form'
+
+gem 'nationality', '~> 1.0.5', git: 'https://github.com/JomaMinoza/nationality'
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
